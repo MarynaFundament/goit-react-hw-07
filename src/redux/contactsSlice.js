@@ -61,7 +61,7 @@ const contactsReducer = createSlice({
   export const selectLoading = state => state.contacts.loading;
   export const selectError = state => state.contacts.error;
 
-  export const filteredContacts = createSelector(
+  export const selectFilteredContacts = createSelector(
   [selectContacts, selectNameFilter], 
   (contacts, filterText ) => {
     return contacts.filter((el) => 
